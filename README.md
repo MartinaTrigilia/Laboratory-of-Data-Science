@@ -1,1 +1,1 @@
-# Laboratory-of-Data-Science
+# Laboratory of Data-Science
