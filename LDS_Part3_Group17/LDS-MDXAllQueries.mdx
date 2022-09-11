@@ -1,0 +1,43 @@
+--Assignment 1. Show the percentage increase in winner rank points with respect to the previous 
+--year for each winner
+
+with member abs_incr as
+([Tournament].[MonthQuarterYear].currentmember.lag(1), [Measures].[Winner Rank Points] )
+
+member diff as
+[Measures].[Winner Rank Points] - abs_incr
+
+member perc_incr as
+case when abs_incr = 0 then '-' else diff/abs_incr end,
+format_string = "percent"
+
+select {[Measures].[Winner Rank Points], perc_incr} on columns,
+nonempty(([Winner].[Name].[Name], [Tournament].[MonthQuarterYear].[Year])) on rows
+from [Group_17];
+
+
+-- Assignment 2. For each country show the total winner rank points in percentage with respect to
+-- the total winner rank points of the corresponding continent.
+
+with member perc_country as
+[Measures].[Winner Rank Points]/([Winner].[CountryContinent].currentmember.parent, [Measures].[Winner Rank Points]),
+format_string = "percent"
+
+select  {[Measures].[Winner Rank Points], perc_country } on columns,
+nonempty(([Winner].[Continent].[Continent], [Winner].[CountryContinent].[Country Ioc])) on rows
+from [Group_17];
+
+-- Assignment 3. Show the losers having a total loser rank points greater than 10% of the totals loser
+-- rank points in each continent by continent and year.
+
+with member points_contyear as ([Loser].[Name].currentmember.parent, [Measures].[Loser Rank Points])
+
+member ratio as [Measures].[Loser Rank Points]/points_contyear ,
+format_string = "Percent"
+
+select {[Measures].[Loser Rank Points], ratio, points_contyear } on columns,
+nonempty(
+filter(([Tournament].[MonthQuarterYear].[Year], [Loser].[CountryContinent].[Continent], [Loser].[Name].[Name]), 
+	ratio > 0.10)
+) on rows
+from [Group_17];

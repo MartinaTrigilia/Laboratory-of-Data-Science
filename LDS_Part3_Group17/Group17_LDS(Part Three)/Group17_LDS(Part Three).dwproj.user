@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Group 17 DB</Id>
+            <Name>Group 17 DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuviqVouymkq8SJfIXn1dMwAAAAAYAAAARwByAG8AdQBwACAAMQA3ACAARABCAAAAEGYAAAABAAAgAAAAzuXBVtNF5LTZZBT6bhlk0HZ77jsqOPGiZGKOECwno+4AAAAADoAAAAACAAAgAAAA8daEqf7VvXIXWGZcnp2bm5/L0WexvG3ItjszL4VHmSYgAAAACtERuVX8HW32ZLL3sZsV958dNkpKOdy4vaTlT/NGTv5AAAAAhflXmjIM2S3o3pT0UUnVc93qRIFCWufwnXYxVD0xFoheFt4cH4VyQF6UcoCULMdYCF0aUVv6PlmxVvHvoqG9Dg==</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Group 17 DB</Id>
+            <Name>Group 17 DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuviqVouymkq8SJfIXn1dMwAAAAAYAAAARwByAG8AdQBwACAAMQA3ACAARABCAAAAEGYAAAABAAAgAAAAqySmz8i0Gi7yYu+r2TG6Wzz0jBdbo0WGVEZVllOxvbUAAAAADoAAAAACAAAgAAAAseKEsI/G2cr2r6quRFmm+As+ckZnW5KH+JIx47X5uJ0gAAAAL9gnNgeuc3zTbnMHOQGuX3wy4gRp0Uoiw+a4XTfyKylAAAAAwI3O8kYwwyuecReu6mS9c4XfAzZJRrzbLcibBGhexolnU9FWqxhmiRmhimH2gVoeMSQ64U8MF/RPaoA4XMp1Mw==</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>http://lds.di.unipi.it/olap/msmdpump.dll</TargetServer>
+        <TargetDatabase>Group17_LDS</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>
