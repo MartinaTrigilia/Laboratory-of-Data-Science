@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTransformationsUserConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <AssessmentRuleSuppressionSetting />
+        <UseWinAuth>false</UseWinAuth>
+        <WinAuthUserName />
+        <WinAuthDomain />
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>{AA901C9C-2325-4670-89F3-5B47024EBCF7}</Id>
+            <Name>{AA901C9C-2325-4670-89F3-5B47024EBCF7}</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuviqVouymkq8SJfIXn1dMwAAAABOAAAAewBBAEEAOQAwADEAQwA5AEMALQAyADMAMgA1AC0ANAA2ADcAMAAtADgAOQBGADMALQA1AEIANAA3ADAAMgA0AEUAQgBDAEYANwB9AAAAEGYAAAABAAAgAAAAaxT8FTp7gUAGVq8FAymJ2e+u/VRgc1t72u+jepFjIVIAAAAADoAAAAACAAAgAAAAqXGroaZIcjw1fEidxCl9Xb/2Zsue67KMmoD8UUU7D/wgAAAApPDlS9p4W4UThd/ac/lVbsiTeaQuFgfsXXGdGPNmx4FAAAAAmIClKwPTouCghbyD/WC3z4BkW+ptoEQ0Znj1ya9ObiK1Z+7X4x3wXOd7ztZKze7oLABctsaWc1u50vKgMjkNOw==</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>{AA901C9C-2325-4670-89F3-5B47024EBCF7}</Id>
+            <Name>{AA901C9C-2325-4670-89F3-5B47024EBCF7}</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuviqVouymkq8SJfIXn1dMwAAAABOAAAAewBBAEEAOQAwADEAQwA5AEMALQAyADMAMgA1AC0ANAA2ADcAMAAtADgAOQBGADMALQA1AEIANAA3ADAAMgA0AEUAQgBDAEYANwB9AAAAEGYAAAABAAAgAAAAsyLEFkv66JYgG3xMUajNeqb5f9Hdvhnn9y81fhWZABIAAAAADoAAAAACAAAgAAAA/vcy/1yqL/NEjJUVebBA61xStjGqPI5V22GuxFSwV2IgAAAABa1boPiSlXf41RvW80JYCPLn0AUMX90/adMzCtesbxdAAAAAEm8oEVmlvaV/PjAbbahOi79ldXfouCBW9IygvwevNMgEiM/9HCskhTPBdMtzUYMsnffIBeKlSsbDiKu1q61jPg==</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <OfflineMode>false</OfflineMode>
+        <ProgressReporting>true</ProgressReporting>
+        <ParameterConfigurationSensitiveValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2021-12-12T16:51:45.3891009Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationSensitiveValues>
+      </Options>
+    </Configuration>
+  </Configurations>
+</DataTransformationsUserConfiguration>

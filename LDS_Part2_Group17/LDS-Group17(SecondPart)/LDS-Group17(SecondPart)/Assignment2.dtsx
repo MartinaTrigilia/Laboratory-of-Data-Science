@@ -1,0 +1,1817 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/13/2021 3:41:20 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-0GKA7FTA"
+  DTS:CreatorName="LAPTOP-0GKA7FTA\marti"
+  DTS:DTSID="{F643AE89-3EA9-4C82-AB60-31E2D0DB4ABA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Assignment2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{6937F7AA-9A06-416D-A7AA-B88A9E086383}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6FCB7B33-491B-43C7-B1CA-5695ABA94D7B}"
+      DTS:ObjectName="Gestione connessione file flat">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\marti\Desktop\LDS-SecondPart\Ass_2.CSV">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="avg_matches_won_per_country"
+              DTS:DTSID="{0731D911-5620-424F-81FB-0F17829ECEEE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="player_id"
+              DTS:DTSID="{226AA08D-55A1-4897-A3FC-61DB54F3753C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="matches_won"
+              DTS:DTSID="{EE885762-1095-45EE-A927-4E8EF6F4C6B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="player_name"
+              DTS:DTSID="{E6E6335B-1057-47F5-B038-D33FACF6D139}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country_id"
+              DTS:DTSID="{C86ADFAD-2616-49EC-AC69-19B5ADAD8395}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D808CE24-6A24-466F-A171-2FD3A44DBB13}"
+      DTS:ObjectName="lds.di.unipi.it.Group_17_DB.Group_17">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_17;Initial Catalog=Group_17_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{691360B1-A879-4CF7-B6BF-6F4B88958788}"
+      DTS:ObjectName="lds.di.unipi.it.Group_17_DB.Group_17 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_17;Initial Catalog=Group_17_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuviqVouymkq8SJfIXn1dMwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAABMN573NR+NGN4Gf4LIkWoWo+csdHAhaPPz085O/gonwAAAAAOgAAAAAIAACAAAADMjyZ5/bLshkNSr7p1nWAPZj5NkpTZg24T95yevKZE6yAAAAAGE1k4zhMQX9G+Ay3q2+UmmyHzG+jIKVyDcA+a763C30AAAACZzyMHjLIMWbf96AvaGOVXYZQAMvbTBFogeBa6L4gfRhYIYvZ+4FJHqy+zX+4HKNtXSHJDUm+kKb0WB/6yZhq6</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Assignment2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{36936A71-1C09-47A6-861E-55AE17425B13}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Assignment2"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Assignment2\add country_id&amp;name"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="add country_id&amp;name"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_17].[Player]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_17].[Player]) [refTable]
+where [refTable].[player_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="player_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="country_id" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="name" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="sex" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="hand" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ht" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="byear_of_birth" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[winner_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Assignment2\add country_id&amp;name.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17 1]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Assignment2\add country_id&amp;name.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment2\add country_id&amp;name.Inputs[Input ricerca].Columns[winner_id]"
+                      cachedDataType="i4"
+                      cachedName="winner_id"
+                      lineageId="Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[winner_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">player_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Assignment2\add country_id&amp;name.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca].Columns[country_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="10"
+                      lineageId="Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca].Columns[country_id]"
+                      name="country_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">country_id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca].Columns[player_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="50"
+                      lineageId="Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca].Columns[player_name]"
+                      name="player_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">name</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Assignment2\add country_id&amp;name.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Assignment2\add country_id&amp;name.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Assignment2\add country_id&amp;name.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Assignment2\add country_id&amp;name.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment2\add country_id&amp;name.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Assignment2\add country_id&amp;name.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Assignment2\add country_id&amp;name.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Assignment2\add country_id&amp;name.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment2\Avg wins per country"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Avg wins per country"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Assignment2\Avg wins per country.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment2\Avg wins per country.Inputs[Input aggregazione 1].Columns[country_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="country_id"
+                      lineageId="Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca].Columns[country_id]" />
+                    <inputColumn
+                      refId="Package\Assignment2\Avg wins per country.Inputs[Input aggregazione 1].Columns[matches_won]"
+                      cachedDataType="ui8"
+                      cachedName="matches_won"
+                      lineageId="Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[matches_won]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Assignment2\Avg wins per country.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment2\Avg wins per country.Outputs[Output aggregazione 1].Columns[country_id]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Assignment2\Avg wins per country.Outputs[Output aggregazione 1].Columns[country_id]"
+                      name="country_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca].Columns[country_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\Avg wins per country.Outputs[Output aggregazione 1].Columns[avg_matches_won_per_country]"
+                      dataType="r8"
+                      lineageId="Package\Assignment2\Avg wins per country.Outputs[Output aggregazione 1].Columns[avg_matches_won_per_country]"
+                      name="avg_matches_won_per_country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[matches_won]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment2\Distribute input"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Distribuisce ogni riga di input a ogni riga di uno o più output. Ad esempio, creare un nuovo ramo del flusso di dati per creare una copia dei dati in modo che sia possibile mascherare alcuni valori prima di condividerli con partner esterni."
+              name="Distribute input">
+              <inputs>
+                <input
+                  refId="Package\Assignment2\Distribute input.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Assignment2\Distribute input.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Assignment2\Distribute input.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Assignment2\Distribute input.Outputs[Output multicast 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 2"
+                  synchronousInputId="Package\Assignment2\Distribute input.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Assignment2\Distribute input.Outputs[Output multicast 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 1"
+                  synchronousInputId="Package\Assignment2\Distribute input.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment2\matches_won greater than avg_matches_won_per_country"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Suddivisione condizionale;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Indirizza righe di dati a output diversi a seconda del contenuto dei dati. Usare le condizioni (espressioni SSIS) per specificare le righe da indirizzare. Ad esempio, separare i record da eliminare da quelli pronti per essere caricati oppure indirizzare unicamente un subset di record."
+              name="matches_won greater than avg_matches_won_per_country"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Inputs[Input suddivisione condizionale]"
+                  description="Input della trasformazione Suddivisione condizionale"
+                  name="Input suddivisione condizionale">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Inputs[Input suddivisione condizionale].Columns[matches_won]"
+                      cachedDataType="ui8"
+                      cachedName="matches_won"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[matches_won]" />
+                    <inputColumn
+                      refId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Inputs[Input suddivisione condizionale].Columns[avg_matches_won_per_country]"
+                      cachedDataType="r8"
+                      cachedName="avg_matches_won_per_country"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[avg_matches_won_per_country]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Outputs[Best_country_players]"
+                  description="Output 1 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Best_country_players"
+                  synchronousInputId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">#{Package\Assignment2\Merge join.Outputs[Output merge join].Columns[matches_won]} &gt; #{Package\Assignment2\Merge join.Outputs[Output merge join].Columns[avg_matches_won_per_country]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">matches_won &gt; avg_matches_won_per_country</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Outputs[Output predefinito suddivisione condizionale]"
+                  description="Output predefinito per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  name="Output predefinito suddivisione condizionale"
+                  synchronousInputId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Inputs[Input suddivisione condizionale]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Outputs[Output errori suddivisione condizionale]"
+                  description="Output degli errori per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori suddivisione condizionale"
+                  synchronousInputId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Inputs[Input suddivisione condizionale]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment2\Merge join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Assignment2\Merge join.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment2\Merge join.Inputs[Input merge join sinistro].Columns[country_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="country_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Assignment2\OrderBy country_id.Outputs[Output ordinamento].Columns[country_id]" />
+                    <inputColumn
+                      refId="Package\Assignment2\Merge join.Inputs[Input merge join sinistro].Columns[avg_matches_won_per_country]"
+                      cachedDataType="r8"
+                      cachedName="avg_matches_won_per_country"
+                      lineageId="Package\Assignment2\OrderBy country_id.Outputs[Output ordinamento].Columns[avg_matches_won_per_country]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Assignment2\Merge join.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment2\Merge join.Inputs[Input merge join destro].Columns[country_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="country_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[country_id]" />
+                    <inputColumn
+                      refId="Package\Assignment2\Merge join.Inputs[Input merge join destro].Columns[winner_id]"
+                      cachedDataType="i4"
+                      cachedName="winner_id"
+                      lineageId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[winner_id]" />
+                    <inputColumn
+                      refId="Package\Assignment2\Merge join.Inputs[Input merge join destro].Columns[matches_won]"
+                      cachedDataType="ui8"
+                      cachedName="matches_won"
+                      lineageId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[matches_won]" />
+                    <inputColumn
+                      refId="Package\Assignment2\Merge join.Inputs[Input merge join destro].Columns[player_name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="player_name"
+                      lineageId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[player_name]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Assignment2\Merge join.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[avg_matches_won_per_country]"
+                      dataType="r8"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[avg_matches_won_per_country]"
+                      name="avg_matches_won_per_country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Assignment2\Merge join.Inputs[Input merge join sinistro].Columns[avg_matches_won_per_country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[player_id]"
+                      dataType="i4"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[player_id]"
+                      name="player_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Assignment2\Merge join.Inputs[Input merge join destro].Columns[winner_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[matches_won]"
+                      dataType="ui8"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[matches_won]"
+                      name="matches_won">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Assignment2\Merge join.Inputs[Input merge join destro].Columns[matches_won]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[player_name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[player_name]"
+                      name="player_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Assignment2\Merge join.Inputs[Input merge join destro].Columns[player_name]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[country_id]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[country_id]"
+                      name="country_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\Assignment2\Merge join.Inputs[Input merge join destro].Columns[country_id]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment2\Number of wins per player"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Number of wins per player"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Assignment2\Number of wins per player.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment2\Number of wins per player.Inputs[Input aggregazione 1].Columns[winner_id]"
+                      cachedDataType="i4"
+                      cachedName="winner_id"
+                      lineageId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].Columns[winner_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[winner_id]"
+                      dataType="i4"
+                      lineageId="Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[winner_id]"
+                      name="winner_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].Columns[winner_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[matches_won]"
+                      dataType="ui8"
+                      lineageId="Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[matches_won]"
+                      name="matches_won">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Assignment2\0:invalid}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment2\OrderBy country_id"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="OrderBy country_id"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Assignment2\OrderBy country_id.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment2\OrderBy country_id.Inputs[Input ordinamento].Columns[country_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="country_id"
+                      lineageId="Package\Assignment2\Avg wins per country.Outputs[Output aggregazione 1].Columns[country_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Assignment2\OrderBy country_id.Inputs[Input ordinamento].Columns[avg_matches_won_per_country]"
+                      cachedDataType="r8"
+                      cachedName="avg_matches_won_per_country"
+                      lineageId="Package\Assignment2\Avg wins per country.Outputs[Output aggregazione 1].Columns[avg_matches_won_per_country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Assignment2\OrderBy country_id.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment2\OrderBy country_id.Outputs[Output ordinamento].Columns[country_id]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Assignment2\OrderBy country_id.Outputs[Output ordinamento].Columns[country_id]"
+                      name="country_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Assignment2\Avg wins per country.Outputs[Output aggregazione 1].Columns[country_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\OrderBy country_id.Outputs[Output ordinamento].Columns[avg_matches_won_per_country]"
+                      dataType="r8"
+                      lineageId="Package\Assignment2\OrderBy country_id.Outputs[Output ordinamento].Columns[avg_matches_won_per_country]"
+                      name="avg_matches_won_per_country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Assignment2\Avg wins per country.Outputs[Output aggregazione 1].Columns[avg_matches_won_per_country]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment2\Orderby country_id"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Orderby country_id"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Assignment2\Orderby country_id.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment2\Orderby country_id.Inputs[Input ordinamento].Columns[winner_id]"
+                      cachedDataType="i4"
+                      cachedName="winner_id"
+                      lineageId="Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[winner_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Assignment2\Orderby country_id.Inputs[Input ordinamento].Columns[matches_won]"
+                      cachedDataType="ui8"
+                      cachedName="matches_won"
+                      lineageId="Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[matches_won]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Assignment2\Orderby country_id.Inputs[Input ordinamento].Columns[country_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="country_id"
+                      lineageId="Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca].Columns[country_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Assignment2\Orderby country_id.Inputs[Input ordinamento].Columns[player_name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="player_name"
+                      lineageId="Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca].Columns[player_name]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[winner_id]"
+                      dataType="i4"
+                      lineageId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[winner_id]"
+                      name="winner_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[winner_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[matches_won]"
+                      dataType="ui8"
+                      lineageId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[matches_won]"
+                      name="matches_won">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1].Columns[matches_won]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[country_id]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[country_id]"
+                      name="country_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca].Columns[country_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[player_name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento].Columns[player_name]"
+                      name="player_name">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca].Columns[player_name]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment2\Read_Winners_from_MatchTable"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Read_Winners_from_MatchTable"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_17].[Match]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Assignment2\Read_Winners_from_MatchTable.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17 1]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].Columns[match_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[match_id]"
+                      length="50"
+                      lineageId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].Columns[match_id]"
+                      name="match_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].Columns[winner_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[winner_id]"
+                      lineageId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].Columns[winner_id]"
+                      name="winner_id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[match_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="match_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[tourney_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="tourney_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[winner_id]"
+                      dataType="i4"
+                      name="winner_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[loser_id]"
+                      dataType="i4"
+                      name="loser_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[score]"
+                      dataType="wstr"
+                      length="50"
+                      name="score" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[best_of]"
+                      dataType="i4"
+                      name="best_of" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[round]"
+                      dataType="wstr"
+                      length="50"
+                      name="round" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[minutes]"
+                      dataType="i4"
+                      name="minutes" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_ace]"
+                      dataType="i4"
+                      name="w_ace" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_df]"
+                      dataType="i4"
+                      name="w_df" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_svpt]"
+                      dataType="i4"
+                      name="w_svpt" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_1stIn]"
+                      dataType="i4"
+                      name="w_1stIn" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_1stWon]"
+                      dataType="i4"
+                      name="w_1stWon" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_2ndWon]"
+                      dataType="i4"
+                      name="w_2ndWon" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_SvGms]"
+                      dataType="i4"
+                      name="w_SvGms" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_bpSaved]"
+                      dataType="i4"
+                      name="w_bpSaved" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_bpFaced]"
+                      dataType="i4"
+                      name="w_bpFaced" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_ace]"
+                      dataType="i4"
+                      name="l_ace" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_df]"
+                      dataType="i4"
+                      name="l_df" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_svpt]"
+                      dataType="i4"
+                      name="l_svpt" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_1stIn]"
+                      dataType="i4"
+                      name="l_1stIn" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_1stWon]"
+                      dataType="i4"
+                      name="l_1stWon" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_2ndWon]"
+                      dataType="i4"
+                      name="l_2ndWon" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_SvGms]"
+                      dataType="i4"
+                      name="l_SvGms" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_bpSaved]"
+                      dataType="i4"
+                      name="l_bpSaved" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_bpFaced]"
+                      dataType="i4"
+                      name="l_bpFaced" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[winner_rank]"
+                      dataType="i4"
+                      name="winner_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[winner_rank_points]"
+                      dataType="i4"
+                      name="winner_rank_points" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[loser_rank]"
+                      dataType="i4"
+                      name="loser_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[loser_rank_points]"
+                      dataType="i4"
+                      name="loser_rank_points" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output errori origine OLE DB].Columns[match_id]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output errori origine OLE DB].Columns[match_id]"
+                      name="match_id" />
+                    <outputColumn
+                      refId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output errori origine OLE DB].Columns[winner_id]"
+                      dataType="i4"
+                      lineageId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output errori origine OLE DB].Columns[winner_id]"
+                      name="winner_id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;)"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1033"
+              name="WriteCSV(&quot;Assignment_2&quot;)"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestione connessione file flat]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestione connessione file flat]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].Columns[avg_matches_won_per_country]"
+                      cachedDataType="r8"
+                      cachedName="avg_matches_won_per_country"
+                      externalMetadataColumnId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].ExternalColumns[avg_matches_won_per_country]"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[avg_matches_won_per_country]" />
+                    <inputColumn
+                      refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].Columns[player_id]"
+                      cachedDataType="i4"
+                      cachedName="player_id"
+                      externalMetadataColumnId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].ExternalColumns[player_id]"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[player_id]" />
+                    <inputColumn
+                      refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].Columns[matches_won]"
+                      cachedDataType="ui8"
+                      cachedName="matches_won"
+                      externalMetadataColumnId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].ExternalColumns[matches_won]"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[matches_won]" />
+                    <inputColumn
+                      refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].Columns[player_name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="player_name"
+                      externalMetadataColumnId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].ExternalColumns[player_name]"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[player_name]" />
+                    <inputColumn
+                      refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].Columns[country_id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="country_id"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].ExternalColumns[country_id]"
+                      lineageId="Package\Assignment2\Merge join.Outputs[Output merge join].Columns[country_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].ExternalColumns[avg_matches_won_per_country]"
+                      dataType="r8"
+                      name="avg_matches_won_per_country" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].ExternalColumns[player_id]"
+                      dataType="i4"
+                      name="player_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].ExternalColumns[matches_won]"
+                      dataType="ui8"
+                      name="matches_won" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].ExternalColumns[player_name]"
+                      dataType="wstr"
+                      length="50"
+                      name="player_name" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat].ExternalColumns[country_id]"
+                      dataType="wstr"
+                      length="10"
+                      name="country_id" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Assignment2.Paths[Best_country_players]"
+              endId="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;).Inputs[Input destinazione file flat]"
+              name="Best_country_players"
+              startId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Outputs[Best_country_players]" />
+            <path
+              refId="Package\Assignment2.Paths[Multicast Output 1]"
+              endId="Package\Assignment2\Avg wins per country.Inputs[Input aggregazione 1]"
+              name="Multicast Output 1"
+              startId="Package\Assignment2\Distribute input.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\Assignment2.Paths[Output aggregazione 1]"
+              endId="Package\Assignment2\OrderBy country_id.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\Assignment2\Avg wins per country.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Assignment2.Paths[Output aggregazione 11]"
+              endId="Package\Assignment2\add country_id&amp;name.Inputs[Input ricerca]"
+              name="Output aggregazione 1"
+              startId="Package\Assignment2\Number of wins per player.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\Assignment2.Paths[Output corrispondenza ricerca]"
+              endId="Package\Assignment2\Distribute input.Inputs[Multicast Input 1]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Assignment2\add country_id&amp;name.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\Assignment2.Paths[Output merge join]"
+              endId="Package\Assignment2\matches_won greater than avg_matches_won_per_country.Inputs[Input suddivisione condizionale]"
+              name="Output merge join"
+              startId="Package\Assignment2\Merge join.Outputs[Output merge join]" />
+            <path
+              refId="Package\Assignment2.Paths[Output multicast 2]"
+              endId="Package\Assignment2\Orderby country_id.Inputs[Input ordinamento]"
+              name="Output multicast 2"
+              startId="Package\Assignment2\Distribute input.Outputs[Output multicast 2]" />
+            <path
+              refId="Package\Assignment2.Paths[Output ordinamento]"
+              endId="Package\Assignment2\Merge join.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\Assignment2\Orderby country_id.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Assignment2.Paths[Output ordinamento1]"
+              endId="Package\Assignment2\Merge join.Inputs[Input merge join sinistro]"
+              name="Output ordinamento"
+              startId="Package\Assignment2\OrderBy country_id.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Assignment2.Paths[Output origine OLE DB]"
+              endId="Package\Assignment2\Number of wins per player.Inputs[Input aggregazione 1]"
+              name="Output origine OLE DB"
+              startId="Package\Assignment2\Read_Winners_from_MatchTable.Outputs[Output origine OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="140,42.6666666666667"
+          Id="Package\Assignment2"
+          TopLeft="119.999998211861,59.1499989423156" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Assignment2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="206.666666666667,42.6666666666667"
+          Id="Package\Assignment2\WriteCSV(&quot;Assignment_2&quot;)"
+          TopLeft="326.041661808268,575.866660529772" />
+        <NodeLayout
+          Size="177.333333333334,41.3333333333334"
+          Id="Package\Assignment2\Avg wins per country"
+          TopLeft="86.2499996088445,337.112424136508" />
+        <NodeLayout
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\Assignment2\Orderby country_id"
+          TopLeft="342.499994896352,263.049998872578" />
+        <NodeLayout
+          Size="222.666666666667,42"
+          Id="Package\Assignment2\Number of wins per player"
+          TopLeft="55.8234206300084,105.308824890713" />
+        <NodeLayout
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\Assignment2\OrderBy country_id"
+          TopLeft="86.5178570556169,409.109484094203" />
+        <NodeLayout
+          Size="358.666666666667,41.3333333333334"
+          Id="Package\Assignment2\matches_won greater than avg_matches_won_per_country"
+          TopLeft="249.880952786933,492.750662311366" />
+        <NodeLayout
+          Size="240.666666666667,41.3333333333334"
+          Id="Package\Assignment2\Read_Winners_from_MatchTable"
+          TopLeft="40.0591324528488,28.1500005695223" />
+        <NodeLayout
+          Size="182.666666666667,42.6666666666667"
+          Id="Package\Assignment2\add country_id&amp;name"
+          TopLeft="71.8749989289791,180.549999453724" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Assignment2\Merge join"
+          TopLeft="356.874994682148,406.699996303916" />
+        <NodeLayout
+          Size="151.333333333334,41.3333333333334"
+          Id="Package\Assignment2\Distribute input"
+          TopLeft="92.5892916376877,264.427130098639" />
+        <EdgeLayout
+          Id="Package\Assignment2.Paths[Multicast Output 1]"
+          TopLeft="171.586312289933,305.760463431973">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.3519607045356"
+              Start="0,0"
+              End="0,23.8519607045356">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.8519607045356" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment2.Paths[Best_country_players]"
+          TopLeft="429.294640630934,534.083995644699">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.7826648850728"
+              Start="0,0"
+              End="0,34.2826648850728">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.2826648850728" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-47.717578125,11.3366449425364,95.43515625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment2.Paths[Output origine OLE DB]"
+          TopLeft="163.774609874762,69.4833339028556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.8254909878569"
+              Start="0,0"
+              End="0,28.3254909878569">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.3254909878569" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment2.Paths[Output ordinamento1]"
+          TopLeft="257.184523722284,429.071406865726">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="99.6904709598647,0"
+              Start="0,0"
+              End="92.1904709598647,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="92.1904709598647,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment2.Paths[Output ordinamento]"
+          TopLeft="428.354161455917,305.716665539245">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,100.983330764671"
+              Start="0,0"
+              End="0,93.4833307646712">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,93.4833307646712" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment2.Paths[Output multicast 2]"
+          TopLeft="243.922624971021,284.738564485609">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98.5773699253314,0"
+              Start="0,0"
+              End="91.0773699253314,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="91.0773699253314,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment2.Paths[Output merge join]"
+          TopLeft="429.044640401207,448.699996303916">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.0506660074497"
+              Start="0,0"
+              End="0,36.5506660074497">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5506660074497" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment2.Paths[Output corrispondenza ricerca]"
+          TopLeft="165.732145283333,223.21666612039">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.2104639782491"
+              Start="0,0"
+              End="0,33.7104639782491">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.7104639782491" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,11.0505444891246,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment2.Paths[Output aggregazione 11]"
+          TopLeft="165.182543112827,147.308824890713">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.241174563011"
+              Start="0,0"
+              End="0,25.741174563011">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.741174563011" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment2.Paths[Output aggregazione 1]"
+          TopLeft="173.383928332231,378.445757469842">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.663726624361"
+              Start="0,0"
+              End="0,23.163726624361">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.163726624361" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Assignment2\Read_Winners_from_MatchTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Assignment2\add country_id&amp;name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_17].[Player]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,916 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/12/2021 12:17:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-0GKA7FTA"
+  DTS:CreatorName="LAPTOP-0GKA7FTA\marti"
+  DTS:DTSID="{1C71FF23-C0E1-49EA-88A5-D800A1A5E361}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="Assignment0"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{6E0BF695-66E2-4673-8D21-F0E486ED8B54}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{07B73AA3-8DBB-462D-83E2-76CE8F6D7444}"
+      DTS:ObjectName="Gestione connessione file flat 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\marti\Desktop\LDS-SecondPart\Ass_0.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="winner_id"
+              DTS:DTSID="{52092D3E-EA7B-4187-B9D7-44538100C540}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tourney_id"
+              DTS:DTSID="{575F88AF-6C60-4236-81E3-7BD58F2F7CA1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="match_won"
+              DTS:DTSID="{8572BE84-4ABD-45B0-ABC2-D1E9EEB633D3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F0824CC9-3FCA-40BA-82AE-AFDB2358BE95}"
+      DTS:ObjectName="Gestione connessione file flat 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\marti\Desktop\PROVALOOPUP.CSV">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tourney_id"
+              DTS:DTSID="{62FE4D60-2B75-429A-8040-8CCCA5EC46B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="continent"
+              DTS:DTSID="{E68FA60F-07AF-4974-B270-551FFE4AE372}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="distinct_cont"
+              DTS:DTSID="{33905D5A-5460-4CF2-8F23-9CBB829ADD43}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{AA901C9C-2325-4670-89F3-5B47024EBCF7}"
+      DTS:ObjectName="lds.di.unipi.it.Group_17_DB.Group_17">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_17;Initial Catalog=Group_17_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4C386075-F5F9-4DE9-8CFA-80E23B15584B}"
+      DTS:ObjectName="lds.di.unipi.it.Group_17_DB.Group_17 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_17;Initial Catalog=Group_17_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuviqVouymkq8SJfIXn1dMwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC+Rqb7YsqvJpjUxt1lUp3ahHpEqIlc+l6nZQ17my6YHwAAAAAOgAAAAAIAACAAAAAuSb2zFDYWT64PL+YcBZcqgAYjY/VyINu9LdEAB2pYSCAAAACCDlJZ9Hqbp8k7DACzfgr7v9+5L5KyZqc5qgGvCxpFBEAAAABTNdApUNq+JUxsDQTK00e5HzGicBuP19e6dNSskMx6nEk5G5OjFM9PWT4rhmMZ1VCEfBJSQUXVULH5fNicVDxm</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CE063590-0770-403C-B87D-49E3E169D42F}"
+      DTS:ObjectName="lds.di.unipi.it.Group_17_DB.Group_17 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_17;Initial Catalog=Group_17_DB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuviqVouymkq8SJfIXn1dMwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACi/SzsISVybU+ID9nLLGEza9modZ1joTe0ijEekcYpqwAAAAAOgAAAAAIAACAAAABLUf1jtPNr/BMcO92vseDbm4bd71wlIEyWLGpg9UDqrSAAAABje5Ma1I71ASBQR0EELNMekcbzaubyR/6nwLVvMh7YdkAAAADmbyBqnIa256Jw6zkk4qHrhLCDThso2cJVswX3bRleDrf9rvga0Lc+wb4e3ZaIpMyPJq2+wDh/ayRqpmq/wsw8</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Assignment0"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{DA9B94AA-90FE-426F-B1CF-91093F036DD3}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Assignment0"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="GroupBy(tourney_id, winner_id), Count(*) as match_won"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Inputs[Input aggregazione 1].Columns[tourney_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="tourney_id"
+                      lineageId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].Columns[tourney_id]" />
+                    <inputColumn
+                      refId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Inputs[Input aggregazione 1].Columns[winner_id]"
+                      cachedDataType="i4"
+                      cachedName="winner_id"
+                      lineageId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].Columns[winner_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney]"
+                  name="Winner_For_Tourney">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[winner_id]"
+                      dataType="i4"
+                      lineageId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[winner_id]"
+                      name="winner_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].Columns[winner_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[tourney_id]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[tourney_id]"
+                      name="tourney_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].Columns[tourney_id]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[match_won]"
+                      dataType="ui8"
+                      lineageId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[match_won]"
+                      name="match_won">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\Assignment0\0:invalid}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment0\OrderBy Tourney_id,match_won DESC"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="OrderBy Tourney_id,match_won DESC"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Inputs[Input ordinamento].Columns[winner_id]"
+                      cachedDataType="i4"
+                      cachedName="winner_id"
+                      lineageId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[winner_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Inputs[Input ordinamento].Columns[tourney_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="tourney_id"
+                      lineageId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[tourney_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Inputs[Input ordinamento].Columns[match_won]"
+                      cachedDataType="ui8"
+                      cachedName="match_won"
+                      lineageId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[match_won]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">-2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento].Columns[winner_id]"
+                      dataType="i4"
+                      lineageId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento].Columns[winner_id]"
+                      name="winner_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[winner_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento].Columns[tourney_id]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento].Columns[tourney_id]"
+                      name="tourney_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[tourney_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento].Columns[match_won]"
+                      dataType="ui8"
+                      lineageId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento].Columns[match_won]"
+                      name="match_won"
+                      sortKeyPosition="-2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney].Columns[match_won]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment0\Read_MatchTable"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Read_MatchTable"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_17].[Match]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Assignment0\Read_MatchTable.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_17_DB.Group_17 1]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].Columns[tourney_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[tourney_id]"
+                      length="50"
+                      lineageId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].Columns[tourney_id]"
+                      name="tourney_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].Columns[winner_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[winner_id]"
+                      lineageId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].Columns[winner_id]"
+                      name="winner_id"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[match_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="match_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[tourney_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="tourney_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[winner_id]"
+                      dataType="i4"
+                      name="winner_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[loser_id]"
+                      dataType="i4"
+                      name="loser_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[score]"
+                      dataType="wstr"
+                      length="50"
+                      name="score" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[best_of]"
+                      dataType="i4"
+                      name="best_of" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[round]"
+                      dataType="wstr"
+                      length="50"
+                      name="round" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[minutes]"
+                      dataType="i4"
+                      name="minutes" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_ace]"
+                      dataType="i4"
+                      name="w_ace" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_df]"
+                      dataType="i4"
+                      name="w_df" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_svpt]"
+                      dataType="i4"
+                      name="w_svpt" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_1stIn]"
+                      dataType="i4"
+                      name="w_1stIn" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_1stWon]"
+                      dataType="i4"
+                      name="w_1stWon" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_2ndWon]"
+                      dataType="i4"
+                      name="w_2ndWon" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_SvGms]"
+                      dataType="i4"
+                      name="w_SvGms" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_bpSaved]"
+                      dataType="i4"
+                      name="w_bpSaved" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[w_bpFaced]"
+                      dataType="i4"
+                      name="w_bpFaced" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_ace]"
+                      dataType="i4"
+                      name="l_ace" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_df]"
+                      dataType="i4"
+                      name="l_df" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_svpt]"
+                      dataType="i4"
+                      name="l_svpt" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_1stIn]"
+                      dataType="i4"
+                      name="l_1stIn" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_1stWon]"
+                      dataType="i4"
+                      name="l_1stWon" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_2ndWon]"
+                      dataType="i4"
+                      name="l_2ndWon" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_SvGms]"
+                      dataType="i4"
+                      name="l_SvGms" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_bpSaved]"
+                      dataType="i4"
+                      name="l_bpSaved" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[l_bpFaced]"
+                      dataType="i4"
+                      name="l_bpFaced" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[winner_rank]"
+                      dataType="i4"
+                      name="winner_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[winner_rank_points]"
+                      dataType="i4"
+                      name="winner_rank_points" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[loser_rank]"
+                      dataType="i4"
+                      name="loser_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB].ExternalColumns[loser_rank_points]"
+                      dataType="i4"
+                      name="loser_rank_points" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Assignment0\Read_MatchTable.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Assignment0\Read_MatchTable.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Assignment0\Read_MatchTable.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output errori origine OLE DB].Columns[tourney_id]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Assignment0\Read_MatchTable.Outputs[Output errori origine OLE DB].Columns[tourney_id]"
+                      name="tourney_id" />
+                    <outputColumn
+                      refId="Package\Assignment0\Read_MatchTable.Outputs[Output errori origine OLE DB].Columns[winner_id]"
+                      dataType="i4"
+                      lineageId="Package\Assignment0\Read_MatchTable.Outputs[Output errori origine OLE DB].Columns[winner_id]"
+                      name="winner_id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;)"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destinazione file flat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Destinazione file flat"
+              localeId="1033"
+              name="WriteCSV(&quot;Assignment_0&quot;)"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifica se i dati verranno sovrascritti o accodati nel file di destinazione."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il testo da scrivere nel file di destinazione prima della scrittura dei dati."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando il qualificatore di testo è abilitato, specifica se il qualificatore di testo nei dati scritti nel file di destinazione verrà o meno preceduto da un carattere di escape."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Gestione connessione file flat 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestione connessione file flat 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat]"
+                  hasSideEffects="true"
+                  name="Input destinazione file flat">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat].Columns[tourney_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="tourney_id"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat].ExternalColumns[tourney_id]"
+                      lineageId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento].Columns[tourney_id]" />
+                    <inputColumn
+                      refId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat].Columns[winner_id]"
+                      cachedDataType="i4"
+                      cachedName="winner_id"
+                      externalMetadataColumnId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat].ExternalColumns[winner_id]"
+                      lineageId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento].Columns[winner_id]" />
+                    <inputColumn
+                      refId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat].Columns[match_won]"
+                      cachedDataType="ui8"
+                      cachedName="match_won"
+                      cachedSortKeyPosition="-2"
+                      externalMetadataColumnId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat].ExternalColumns[match_won]"
+                      lineageId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento].Columns[match_won]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat].ExternalColumns[tourney_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="tourney_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat].ExternalColumns[winner_id]"
+                      dataType="i4"
+                      name="winner_id" />
+                    <externalMetadataColumn
+                      refId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat].ExternalColumns[match_won]"
+                      dataType="ui8"
+                      name="match_won" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Assignment0.Paths[Output ordinamento]"
+              endId="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;).Inputs[Input destinazione file flat]"
+              name="Output ordinamento"
+              startId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\Assignment0.Paths[Output origine OLE DB]"
+              endId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Inputs[Input aggregazione 1]"
+              name="Output origine OLE DB"
+              startId="Package\Assignment0\Read_MatchTable.Outputs[Output origine OLE DB]" />
+            <path
+              refId="Package\Assignment0.Paths[Winner_For_Tourney]"
+              endId="Package\Assignment0\OrderBy Tourney_id,match_won DESC.Inputs[Input ordinamento]"
+              name="Winner_For_Tourney"
+              startId="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won.Outputs[Winner_For_Tourney]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="140,42.6666666666667"
+          Id="Package\Assignment0"
+          TopLeft="118.1249982398,98.7999982333183" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Assignment0">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="206.666666666667,42.6666666666667"
+          Id="Package\Assignment0\WriteCSV(&quot;Assignment_0&quot;)"
+          TopLeft="128.749998975544,282.616662912467" />
+        <NodeLayout
+          Size="350.666666666667,42.6666666666667"
+          Id="Package\Assignment0\GroupBy(tourney_id, winner_id), Count(*) as match_won"
+          TopLeft="60,128.566665667097" />
+        <NodeLayout
+          Size="261.333333333334,42.6666666666667"
+          Id="Package\Assignment0\OrderBy Tourney_id,match_won DESC"
+          TopLeft="106.874999301508,210.799997303486" />
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\Assignment0\Read_MatchTable"
+          TopLeft="159.374997625128,54.4999998837709" />
+        <EdgeLayout
+          Id="Package\Assignment0.Paths[Output origine OLE DB]"
+          TopLeft="238.020832145897,97.1666665504376">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.3999991166594"
+              Start="0,0"
+              End="0,23.8999991166594">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.8999991166594" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment0.Paths[Output ordinamento]"
+          TopLeft="234.812499138526,253.466663970152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.149998942315"
+              Start="0,0"
+              End="0,21.649998942315">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.649998942315" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Assignment0.Paths[Winner_For_Tourney]"
+          TopLeft="236.437499650754,171.233332333763">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.5666649697224"
+              Start="0,0"
+              End="0,32.0666649697224">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.0666649697224" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Assignment0\Read_MatchTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
